@@ -1,0 +1,9 @@
+DirectoryIndex index.htm
+Options -Indexes
+AddHandler server-parsed .htm
+### www.jbarker.com/blog/2011/resource-interpreted-font-transferred-mime-type
+# AddType font/truetype ttf
+
+RewriteEngine on
+
+RewriteRule ^skill/([a-z]+)/*$       /skill/$1.htm        [L]

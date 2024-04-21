@@ -1,0 +1,13 @@
+<h1><!--#echo var='TITLE'--></h1>
+
+<ul class="skillList clearfix">
+	<!--#if expr='v("SKILL")!=""' -->
+	<li><span><a href="/skill/<!--#echo var='SKILL'-->/"><!--#echo var='SKILL'--></a></span></li>
+	<!--#endif --><!--#if expr='v("SKILL2")!=""' -->
+	<li><span><a href="/skill/<!--#echo var='SKILL2'-->/"><!--#echo var='SKILL2'--></a></span></li>
+	<!--#endif --><!--#if expr='v("SKILL3")!=""' -->
+	<li><span><a href="/skill/<!--#echo var='SKILL3'-->/"><!--#echo var='SKILL3'--></a></span></li>
+	<!--#endif -->
+</ul>
+
+<!--#if expr='v("DESCR")!=""' --><p><strong><!--#echo var='DESCR'--></strong></p><!--#endif -->

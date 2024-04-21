@@ -1,0 +1,33 @@
+	<!-- arrows navigation -->
+					</div>
+
+	<div class="projectNav clearfix">
+
+		<!--#if expr='v("NEXT")!=""' -->
+		<div class="next ">
+			<a href="/projects/<!--#echo var='NEXT'-->/" rel="next">next</a>
+		</div>
+		<!--#else -->
+		<div class="next inactive">
+		</div>
+		<!--#endif -->
+
+		<!--#if expr='v("PREV")!=""' -->
+		<div class="previous ">
+			<a href="/projects/<!--#echo var='PREV'-->/" rel="prev">previous</a>
+		</div>
+		<!--#else -->
+		<div class="previous inactive">
+		</div>
+		<!--#endif -->
+
+	</div> <!-- end navigation -->
+
+				</div>
+				<div class="left">
+					<p><img class="aligncenter size-full" alt="" src="<!--#echo var='ID'-->.jpg" width="580" /></p>
+
+				</div>
+			</div>
+		</div>
+	</div>
