@@ -1,0 +1,32 @@
+	<!-- tpl arrows navigation -->
+					</div>
+
+	<div class="projectNav clearfix">
+
+		{% if NEXT %}
+		<div class="next ">
+			<a href="/projects/{{ NEXT }}/" rel="next">next</a>
+		</div>
+		{% else %}
+		<div class="next inactive">
+		</div>
+		{% endif %}
+
+		{% if PREV %}
+		<div class="previous ">
+			<a href="/projects/{{ PREV }}/" rel="prev">previous</a>
+		</div>
+		{% else %}
+		<div class="previous inactive">
+		</div>
+		{% endif %}
+	</div>
+
+				</div>
+				<div class="left">
+					<p><img class="aligncenter size-full" alt="" src="<!--#echo var='ID'-->.jpg" width="580" /></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <!-- end tpl arrows navigation -->

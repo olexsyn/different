@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<!--#include virtual="data.htm"-->
+		<!-- {% include 'data.htm' %} -->
 	<!--#include virtual="/_inc/head.htm"-->
+		<!-- {% include 'head.htm' %} -->
 	<title><!--#echo var="TITLE"--> - <!--#echo var="SITE_NAME"--></title>
 </head>
 
@@ -18,7 +20,8 @@
 	<p>У файлі <code>/projects/test-pirate/index.htm</code> може бути розміщений додатковий html-код.</p>
 	<p>Наприклад, посилання <a href="https://lamathebook.com/" target="_blank">lamathebook</a>, яке буде відкриватися у новій вкладці...</p>
 
-<!--#include virtual="/_inc/arrows_navigation.htm"-->
+<!--#include virtual="/cgi-bin/arrows_navigation.py?proj=$ID"-->
+
 
 <!--#include virtual="/_inc/footer.htm"-->
 
