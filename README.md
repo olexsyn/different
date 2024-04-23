@@ -1,26 +1,28 @@
 # different
 
-Для даного сайту сторінка - це окремий проект, а в якості теґів - виступають навички.
+Для даного сайту сторінка - є окремим **проектом**, а в якості теґів - маємо на увазі **навички**.
 
 ## Як створити новий проект
 
 Проекти розміщені в _**public_html/projects/**_.
 
-### Назва проекту
+### Вибір назви проекту
 
 Для того, щоб додати новий проект необхідно в _**public_html/projects/**_ створити папку з його унікальним іменем (технічною мовою - ідентифікатором), що може складається з маленьких латинських літер, цифр і дефісу.
 
-Наприклад, ми хочемо додати проект під назвою "Llama in the Moon Kingdom". Для цього краще створити таку папку: _**public_html/projects/llama-in-the-moon-kingdom/**_. Не обов’зково, щоб літери точно співпадали з назвою проекта. Папку можна назвати і _**llama-in-the-moon**_, а також _**12345**_. Але краще, щоб ім’я несло в собі якийсь зрозумілий зміст...
+Наприклад, ми хочемо додати проект під назвою "Llama in the Moon Kingdom". Для цього краще створити таку папку: _**public_html/projects/llama-in-the-moon-kingdom/**_.
+
+Необов’язково, щоб літери точно співпадали з назвою проекта. Папку можна назвати і _**llama-in-the-moon**_, а також _**llama-2**_. Але краще, щоб ім’я несло в собі якийсь зрозумілий зміст...
 
 ### Файли проекту
 
 В кожній папці проекту має бути 4 файли:
 
 ```
-public_html/projects/llama-in-the-moon-kingdom/data.htm                               - дані проекту (ім’я, заголовок, опис, скіли, та ін.)
-public_html/projects/llama-in-the-moon-kingdom/index.htm                              - головна сторінка-шаблон, яка "підтягує" дані
-public_html/projects/llama-in-the-moon-kingdom/llama-in-the-moon-kingdom.jpg          - велике зображення проекту
-public_html/projects/llama-in-the-moon-kingdom/llama-in-the-moon-kingdom_preview.jpg  - маленьке зображення (прев’юшка)
+llama-in-the-moon-kingdom/data.htm                               - дані проекту (ім’я, заголовок, опис, скіли, та ін.)
+llama-in-the-moon-kingdom/index.htm                              - головна сторінка-шаблон, яка "підтягує" дані
+llama-in-the-moon-kingdom/llama-in-the-moon-kingdom.jpg          - велике зображення проекту
+llama-in-the-moon-kingdom/llama-in-the-moon-kingdom_preview.jpg  - маленьке зображення (прев’юшка)
 ```
 
 #### Зображення (jpg)
@@ -46,7 +48,7 @@ public_html/projects/llama-in-the-moon-kingdom/llama-in-the-moon-kingdom_preview
 ```
 де
 ```
-ID     - ідентифікатор (як і назва папка)
+ID     - ідентифікатор (як і назва папки)
 TITLE  - заголовок
 DESCR  - опис
 SKILL  - скіл 1
@@ -56,37 +58,30 @@ PREV   - посилання на попередній проект
 NEXT   - посилання на наступний проект
 ```
 
-DESCR - може бути порожнім: `''`, як і SKILL2, SKILL3, PREV, NEXT.
+DESCR - може бути порожнім: `''`, як і SKILL2, SKILL3, PREV і NEXT.
 
 Необхідно звертати увагу на присутність в TITLE і DESC подвійних лапок і апострофів, щоб не виникла помилка при побудові сторінки. Пояснюю...
 
 Значення value можна обмежувати як подвійними лапками, так і апострофами:
-
 ```
 <!--#set var="TITLE"  value="Llama in the Moon Kingdom"-->
 <!--#set var="DESCR"  value='Creating and publishing my own book for children.'-->
 ```
 Якщо у тексті є символ апострофу `'`, то треба застосувати подвійні лапки: 
-
 ```
 <!--#set var="DESCR"  value="Everyone's favorite game..."-->
 ```
-
-Якщо у тексті є подвійні лапки `"`, то треба застосувати апострофи: 
-
+Якщо у тексті є подвійні лапки `"`, то слід застосувати апострофи: 
 ```
 <!--#set var="DESCR"  value='Advertising campaign for TM "Avenue".'-->
 ```
+Але що робити, коли в тексті є і апострофи і подвійні лапки? (_"Everyone\'s favorite game "Mafia" with new characters..."_)
 
-Але що робити, коли в тексті є і апострофи і подвійні лапки? (_"Everyone\'s favorite game "Mafia" with new characters"_)
+- Варіант 1: `value='Everyone\'s favorite game "Mafia" with new characters...'` (екранувати апостроф, якщо value обмежено апострофами)
+- Варіант 2: `value="Everyone's favorite game \"Mafia\" with new characters..."` (екранувати подвійні лапки, якщо value обмежено лапками)
+- Варіант 3: `value="Everyone's favorite game «Mafia» with new characters..."` (використати інші лапки `«»`)
+- Варіант 4: `value="Kids always ask: “What should I do?”."` (такі лапки `“”` теж можна беспечно застосовувати в тексті)
 
-Про апострофи/лапки в назві
-
-<!--#set var="ID"     value="zelenij-ostriv-2"-->
-<!--#set var="TITLE"  value="Website «Livadia invest»"-->
-<!--#set var="DESCR"  value='Website for the corporation "Livadia Invest".'-->
-<!--#set var="DESCR"  value='Kids always ask: “What should I do?”.'-->
-<!--#set var="DESCR"  value='Everyone\'s favorite game "Mafia" with new characters on the eve of the New Year - the Year of the Sheep.'-->
 
 
 ```html
@@ -94,6 +89,43 @@ DESCR - може бути порожнім: `''`, як і SKILL2, SKILL3, PREV, 
 <p>У файлі <code>/projects/test-pirate/index.htm</code> може бути розміщений додатковий html-код.</p>
 <p>Наприклад, посилання <a href="https://lamathebook.com/" target="_blank">lamathebook</a>, яке буде відкриватися у новій вкладці...</p>
 
+```
+
+## Як додати нову навичку (skill)
+
+Скіли розміщені в _**public_html/skill/**_.
+
+В цій папці ми бачимо перелік файлів `.htm` і’мя яких є назвами скілів:
+
+```
+skill/_all.htm
+skill/app.htm
+skill/game.htm
+skill/illustration.htm
+skill/logo.htm
+skill/packaging.htm
+skill/print.htm
+skill/watercolor.htm
+skill/web.htm
+```
+
+_all.htm - використовується на головній сторінці, де ми відображуємо усі проекти з усіма скілами. А інші - на сторінках, де ми показуємо проекти, що мають відношення до цього скіла.
+
+Для того, щоб додати новий скіл (наприклад, "test"), беремо один з файлів (крім _all.htm) і робимо його копію з іменем _**test.htm**_.
+Потім, за допомогою текстового редактора відкриваємо цей файл знаходимо і підправляємо рядок
+```
+<!--#set var="SELSKILL" value="OLD_SKILL_NAME"-->
+```
+замінивши в value значення іншого скіла на "test":
+```
+<!--#set var="SELSKILL" value="test"-->
+```
+Зберігаємо файл і можемо використовувати скіл в файлах data.htm:
+```
+...
+<!--#set var="SKILL"  value="illustration"-->
+<!--#set var="SKILL2" value="test"-->
+...
 ```
 
 
