@@ -2,12 +2,9 @@
 
 1 [Як створити новий проект](#Як-створити-новий-проект)  
   1.1 [Вибір назви проекту](#Вибір-назви-проекту)  
-  1.2 [About the author](#12-about-the-author)  
-  1.3 [Who should read this book?](#13-who-should-read-this-book)  
-  1.4 [How to use this book](#14-how-to-use-this-book)  
-  1.5 [What you'll be able to do after reading this book](#15-what-youll-be-able-to-do-after-reading-this-book)  
-    1.5.1 [Creating PDF documents from scratch](#151-creating-pdf-documents-from-scratch)  
-    1.5.2 [Aggregating content using containers ](#152-aggregating-content-using-containers-)  
+  1.2 [#Файли проекту](#Файли-проекту)  
+    1.2.1 [Зображення (jpg)](#Зображення-(jpg))  
+    1.2.2 [Код (htm)](#Код-(htm))  
 
 
 Для даного сайту сторінка - є окремим **проектом**, а в якості теґів - маємо на увазі **навички**.
