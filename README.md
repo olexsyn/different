@@ -34,6 +34,8 @@ README.md
 ```
 Для даного сайту сторінка - є окремим **проектом**, а в якості теґів - маємо на увазі **навички**.
 
+[top](#table-of-contents)
+
 # 2 Як створити новий проект
 
 Проекти розміщені в _**public_html/projects/**_.
@@ -220,3 +222,4 @@ public_html/about/index.htm
 public_html/about/sashakosmos.jpg
 
 ```
+[top](#table-of-contents)
