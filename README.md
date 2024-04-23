@@ -100,7 +100,7 @@ DESCR - може бути порожнім: `''`, як і SKILL2, SKILL3, PREV �
 - Варіант 3: `value="Everyone's favorite game «Mafia» with new characters..."` (використати інші лапки `«»`)
 - Варіант 4: `value="Kids always ask: “What should I do?”."` (такі лапки `“”` теж можна беспечно застосовувати в тексті)
 
-
+#### index.htm
 
 ```html
 <!-- ADDITIONAL CODE HERE -->
