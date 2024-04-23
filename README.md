@@ -6,8 +6,8 @@
   2.2 [Файли проекту](#22-Файли-проекту)  
     2.2.1 [Зображення (.jpg)](#221-Зображення-jpg)  
     2.2.2 [Код (.htm)](#222-Код-htm)  
-      2.2.2.1 [data.htm](#2221-datahtm)  
-      2.2.2.2 [index.htm](#2222-indexhtm)  
+      - [data.htm](#datahtm)  
+      - [index.htm](#indexhtm)  
 3 [Як додати нову навичку (skill)](#3-Як-додати-нову-навичку-skill)  
 4 [Сторінка About](#4-Сторінка-About)  
 5 [Технічні деталі](#5-Технічні-деталі)  
@@ -79,7 +79,7 @@ llama-in-the-moon-kingdom_preview.jpg  - маленьке зображення (
 
 ### 2.2.2 Код (.htm)
 
-#### 2.2.2.1 data.htm
+#### data.htm
 
 Приклад файлу для проекту "llama-in-the-moon-kingdom":
 
@@ -130,7 +130,7 @@ DESCR - може бути порожнім: `''`, як і SKILL2, SKILL3, PREV �
 - Варіант 3: `value="Everyone's favorite game «Mafia» with new characters..."` (використати інші лапки `«»`)
 - Варіант 4: `value="Kids always ask: “What should I do?”."` (такі лапки `“”` теж можна беспечно застосовувати в тексті)
 
-#### 2.2.2.2 index.htm
+#### index.htm
 
 ```html
 <!-- ADDITIONAL CODE HERE -->
